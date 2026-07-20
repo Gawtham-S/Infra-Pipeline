@@ -13,7 +13,7 @@ module "ec2" {
     source = "../../modules/ec2"
     ami_id = "ami-02d23a03f80ba79fc"
     instance_type = "t3.micro"
-    subnet_id = module.vpc.subnet_id
+    subnet_id = module.vpc.subnet_id.id
     ec2_count = 2
     env = "qa"
 
